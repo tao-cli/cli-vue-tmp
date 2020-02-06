@@ -1,2 +1,2 @@
-# cli-vue-tmp
-vue 基础框架，基于 vue-cli 创建
+# vue-tmplate
+vue 基础框架，基于 vue-cli3.0 创建
