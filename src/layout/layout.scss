@@ -1,0 +1,328 @@
+html,
+body,
+* {
+    font-size: 14px;
+}
+
+ul li {
+    margin: 0;
+    list-style-type: none;
+}
+
+.ivu-layout-header {
+    padding: 0;
+    background: inherit;
+}
+
+.menuItem-left {
+    margin-right: 22px;
+    
+    > i {
+        margin-right: 12px;
+    }
+}
+
+.menu-icon {
+    float: left;
+    position: relative;
+    z-index: 999;
+    font-size: 20px;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.rotate-icon {
+    &::before {
+        transform: rotate(-180deg);
+    }
+}
+
+.menu-item {
+    overflow-y: auto;
+    
+    i.iconfont {
+        font-size: 24px;
+    }
+}
+
+.menu-item span {
+    display: inline-block;
+    overflow: hidden;
+    width: 69px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+    transition: width 0.2s ease 0.2s;
+}
+
+.menu-item i {
+    transform: translateX(0px);
+    transition: font-size 0.2s ease, transform 0.2s ease;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.collapsed-menu span {
+    width: 0px;
+    transition: width 0.2s ease;
+}
+
+.collapsed-menu i {
+    transform: translateX(5px);
+    transition: font-size 0.2s ease 0.2s, transform 0.2s ease 0.2s;
+    vertical-align: middle;
+    font-size: 22px;
+}
+
+.avator {
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+    background: url(../../assets/images/avatar.png) no-repeat center;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.ivu-menu-vertical.ivu-menu-light:after {
+    background: none;
+}
+
+.menu-list {
+    background: #213458;
+    color: #729BE7;
+    
+    li {
+        width: 100%;
+    }
+    
+    .ivu-menu-submenu .ivu-menu-item {
+        color: #fff;
+    }
+    
+    .ivu-menu-item:hover, .ivu-menu-submenu-title:hover {
+        background: #729BE7;
+        color: #fff;
+    }
+}
+
+.username {
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    margin: 0 8px;
+    color: rgba(103, 103, 143, 1);
+}
+
+.layout {
+    border: 1px solid #d7dde4;
+    background: #f5f7f9;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ivu-menu-vertical {
+    background: #213458;
+}
+
+.layout-logo {
+    position: relative;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 60px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    background: #fff;
+    
+    &:after {
+        content: "";
+        background: #fff;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.layout-nav {
+    margin: 0 20px 0 auto;
+    text-align: right;
+    
+    li {
+        text-align: center;
+        height: 40px;
+        
+        a {
+            color: #000;
+            
+            &:hover {
+                color: lightskyblue;
+            }
+        }
+    }
+    
+    .ivu-icon-ios-arrow-forward {
+        &::before {
+            content: "";
+            background: url(../../assets/images/down.png) no-repeat center;
+            width: 8px;
+            height: 8px;
+            display: inline-block;
+        }
+    }
+}
+
+.orgBox {
+    float: left;
+    position: relative;
+    z-index: 990;
+    line-height: 60px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(103, 103, 143, 1);
+}
+
+.company-select {
+    position: relative;
+    float: left;
+    z-index: 999;
+}
+
+.ivu-layout-sider-collapsed {
+    background: #213458 !important
+}
+
+.ul-small {
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+    
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #e6ebf0;
+        left: 0;
+        top: 59px;
+    }
+    
+    .small-logo {
+        position: relative;
+        height: 40px;
+        width: 36px;
+        margin-top: 14px;
+    }
+    
+    i {
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .li-small {
+        position: relative;
+        line-height: 48px;
+        
+        
+    }
+    
+    .active-small {
+        background: #729BE7;
+        
+        &::before {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            content: "";
+            width: 6px;
+            height: 38px;
+            background: #fff;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            
+            
+        }
+    }
+}
+
+/*MENU UI色调*/
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+    color: #fff;
+    background: #729BE7;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):before {
+    content: '';
+    display: block;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #91D5FF;
+}
+
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu):after {
+    width: 0;
+}
+.menu-list{
+  display: flex; height: 68px; width:264px;
+  h3{
+    width:96px; line-height: 52px;text-align: center;background: rgba(68, 68, 79, 1);
+    font-size:14px; height: 68px; display: flex; align-items: center;justify-content: center;
+    font-family:SFUIDisplay-Light,SFUIDisplay;
+    color:rgba(181,181,190,1); overflow: hidden; white-space:nowrap;
+    &:hover{
+      color:#fff; cursor: pointer;
+      span{
+        display: inline-block; width: 90%;  height: 38px; line-height: 38px;
+        border-top-left-radius: 25px; border-bottom-left-radius: 25px; 
+        margin-left:10px;    text-align: left; padding-left: 16px;
+        background: rgba(255,255,255,0.6)}
+    }
+    letter-spacing: 1px;
+  }
+  h3.isActive{
+    color:rgba(255, 141, 10, 1); position: relative;
+    label{
+      position: absolute; display: inline-block; width:20px; height:20px; 
+      background:#fff; overflow: hidden;right:0; 
+      i{
+        display: inline-block; width: 30px; height: 25px;
+        position: absolute; border-radius: 50%;background: #444;
+      }
+    }
+    .top-icon{ top:0; i{left:-50%;top:-50%;}} 
+    .bottom-icon{ bottom:0; i{left:-50%;bottom:-50%;}}
+    span{
+      display: inline-block; width: 90%;background:#fff; height: 38px; line-height: 38px;
+      border-top-left-radius: 25px; border-bottom-left-radius: 25px; 
+      margin-left:10px;    text-align: left; padding-left: 16px;
+    }
+  }
+}
+.menu-sider{
+  overflow: hidden; overflow-y:auto;position: relative; 
+}
+.menu-title{
+  display: flex;position: fixed; background:#fff;width:256px;z-index:99;
+  section{
+    width:96px;height: 90px;text-align: center; background: rgba(68, 68, 79, 1); padding-top:24px;
+    border-bottom: solid 1px rgba(105, 105, 116, 1);
+  }
+  h2{margin-left: 20px; height: 90px; line-height: 90px; width:128px;border-bottom: solid 1px rgba(226, 226, 234, 1); }
+}
+.aisde-submenu{
+  position: fixed; left:95px; top:100px; width: 160px;
+  header{
+    font-size:16px; padding-left: 20px; margin-top:20px;
+    font-family:SFUIDisplay-Medium,SFUIDisplay;
+    font-weight:600;
+    color:rgba(23,23,37,1);
+  }
+}

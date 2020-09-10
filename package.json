@@ -1,0 +1,94 @@
+{
+  "name": "vue-cli",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8",
+    "axios": "0.18.1",
+    "babel-polyfill": "6.26.0",
+    "clipboard": "^2.0.6",
+    "countup.js": "2.0.5",
+    "date-fns": "1.30.1",
+    "echarts": "4.7.0",
+    "iview-area": "1.6.0",
+    "js-md5": "0.7.3",
+    "lodash": "4.17.15",
+    "node-sass": "4.14.1",
+    "qrcode": "1.4.4",
+    "qs": "6.9.4",
+    "sass-loader": "8.0.2",
+    "swiper": "5.4.0",
+    "view-design": "4.2.0",
+    "vue": "2.6.11",
+    "vue-awesome-swiper": "4.1.1",
+    "vue-color": "2.7.1",
+    "vue-router": "3.1.6",
+    "vue-virtual-scroll-list": "2.2.3",
+    "vuex": "3.4.0",
+    "wangeditor": "3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@vue/cli-plugin-babel": "^3.10.0",
+    "@vue/cli-plugin-eslint": "^3.10.0",
+    "@vue/cli-service": "^3.10.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "husky": "^3.0.4",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "2.6.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off",
+      "no-mixed-spaces-and-tabs": [
+        0
+      ]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "description": "```txt\r +-- dist/                                   ---打包之后的dist目录\r +-- public/                                 ---静态目录,/xx 直接饮用，不需要public\r |   --- index.html                          ---首页入口html文件\r |   --- favicon.ico                         ---网页图标\r +-- src/\r +   ---/components/                         ---组件目录\r +   ---/base/                               ---基本组件\r +   ---/commons/                            ---公共组件包\r +   ---/layout/                             ---布局方案\r +   ---/mixins/                             ---mixins\r +   ---/view/                               ---复杂页面请单独起一个组件页面\r +   ---assets/                              --- 资源文件\r |   ---main.js                              ---入口文件\r |   ---App.vue                              ---总vue-route入口\r --- babel.config.js                         ---babel配置文件\r --- README.md                               ---Readme\r --- package-lock.json                            ---依赖包\r --- package.json                            ---依赖包\r --- vue.config.js                           ---配置vue脚手架的文件，包含本地跨域、base url更改等\r ```\r ##  技术栈\r - vue\r - axios\r - vuex\r - iview\r - vue-router\r ## i18n",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://code.data4truth.com/pi/mos.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
